@@ -1,0 +1,46 @@
+.product-list {
+  text-align: center;
+  padding: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  width: 250px; /* ✅ Keeps a good card size */
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%; /* ✅ Ensures image fits within the card */
+  height: auto;
+  max-height: 200px; /* ✅ Prevents images from being too tall */
+  object-fit: cover; /* ✅ Keeps aspect ratio and crops excess */
+  border-radius: 8px;
+}
+
+.view-details {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px; /* ✅ Increased padding for better look */
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px; /* ✅ Adjusted font size */
+  font-weight: bold; /* ✅ Makes text more visible */
+  transition: background 0.3s ease; /* ✅ Smooth hover effect */
+}
+
+.view-details:hover {
+  background: #444;
+}
