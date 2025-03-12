@@ -12,9 +12,9 @@ import ScrollToTop from "./ScrollToTop";
 
 function App() {
   const [products] = useState([
-    { id: 1, name: "Classic Cap", price: 20, image: "/images/cap1.jpg", description: "A stylish classic cap for everyday wear." },
-    { id: 2, name: "Sporty Cap", price: 25, image: "/images/cap2.jpg", description: "A sporty cap designed for outdoor activities." },
-    { id: 3, name: "Luxury Cap", price: 30, image: "/images/cap3.jpg", description: "A premium cap with a luxury feel." }
+    { id: 1, name: "Classic Cap", price: 20, image: "./images/cap1.jpg", description: "A stylish classic cap for everyday wear." },
+    { id: 2, name: "Sporty Cap", price: 25, image: "./images/cap2.jpg", description: "A sporty cap designed for outdoor activities." },
+    { id: 3, name: "Luxury Cap", price: 30, image: "./images/cap3.jpg", description: "A premium cap with a luxury feel." }
   ]);
 
   const [cart, setCart] = useState([]);
