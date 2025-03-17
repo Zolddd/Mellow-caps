@@ -86,9 +86,9 @@ const Checkout = ({ cart, totalPrice, setCart }) => {
 
             {/* ✅ UPI Payment Section */}
             <div className="upi-payment">
-              <h3>UPI Payment</h3>
+              <h3 color="white">UPI Payment</h3>
               <img src={upiQR} alt="UPI QR Code" className="upi-qr" />
-              <p>Scan the QR code or enter UPI ID to pay</p>
+              <p color="white">Scan the QR code or enter UPI ID to pay</p>
               <input
                 type="text"
                 placeholder="Enter UPI ID (e.g.123@ibl)"

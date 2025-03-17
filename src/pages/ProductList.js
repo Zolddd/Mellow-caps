@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./ProductList.css"; // Keep your existing styles
+import "./ProductList.css"; // Import updated styles
 
 const ProductList = ({ products }) => {
   return (
@@ -12,7 +12,7 @@ const ProductList = ({ products }) => {
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
             <p>${product.price}</p>
-            {/* ✅ Corrected link */}
+            {/* ✅ Corrected Link Syntax */}
             <Link to={`/product/${product.id}`} className="view-details">
               View Details
             </Link>

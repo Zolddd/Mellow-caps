@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Cart.css";
+import "./Cart.css"; // Import updated styles
 
 const Cart = ({ cart, removeFromCart, updateCartItem }) => {
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);

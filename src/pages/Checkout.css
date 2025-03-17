@@ -3,6 +3,7 @@
   margin: auto;
   padding: 20px;
   text-align: center;
+  color: #321554;
 }
 
 .order-summary {
@@ -32,6 +33,10 @@
   text-align: left;
 }
 
+.checkout-details p{
+color: #f5a623;
+}
+
 .total-price {
   font-size: 20px;
   font-weight: bold;
@@ -55,7 +60,7 @@
 }
 
 .checkout-form button {
-  background: #ff6600;
+  background: #f5a623;
   color: white;
   padding: 12px;
   font-size: 16px;
@@ -67,16 +72,28 @@
 }
 
 .checkout-form button:hover {
-  background: #e65c00;
+  background: #e59400;
 }
 
 /* ✅ UPI Payment Section */
 .upi-payment {
+  background-color: #20192b;
   margin-top: 20px;
   padding: 15px;
   border: 2px dashed #4CAF50;
   border-radius: 8px;
   text-align: center;
+}
+
+.upi-payment h3 {
+  color: white;
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.upi-payment p{
+  color: white;
+  font-weight: bold;
 }
 
 .upi-qr {

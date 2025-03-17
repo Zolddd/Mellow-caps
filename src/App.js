@@ -7,8 +7,9 @@ import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
-import PlaceOrder from "./pages/PlaceOrder"; // ✅ Import PlaceOrder
+import PlaceOrder from "./pages/PlaceOrder";
 import ScrollToTop from "./ScrollToTop";
+import LoginSignup from "./pages/LoginSignup";
 
 function App() {
   const [products] = useState([
@@ -18,6 +19,7 @@ function App() {
   ]);
 
   const [cart, setCart] = useState([]);
+  const [user, setUser] = useState(localStorage.getItem("user") || null);
 
   const addToCart = (product) => {
     setCart((prevCart) => {
@@ -46,17 +48,28 @@ function App() {
 
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
+  const handleLogin = (email) => {
+    localStorage.setItem("user", email);
+    setUser(email);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+  };
+
   return (
     <Router>
       <ScrollToTop />
-      <Navbar />
+      <Navbar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<ProductList products={products} />} />
         <Route path="/product/:id" element={<ProductDetail products={products} cart={cart} addToCart={addToCart} updateCartItem={updateCartItem} />} />
         <Route path="/cart" element={<Cart cart={cart} updateCartItem={updateCartItem} removeFromCart={removeFromCart} />} />
         <Route path="/checkout" element={<Checkout cart={cart} totalPrice={totalPrice} setCart={setCart} />} />
-        <Route path="/place-order" element={<PlaceOrder />} /> {/* ✅ Added PlaceOrder Route */}
+        <Route path="/place-order" element={<PlaceOrder />} />
+        <Route path="/login" element={<LoginSignup handleLogin={handleLogin} />} /> {/* ✅ Pass handleLogin */}
       </Routes>
       <Footer />
     </Router>
