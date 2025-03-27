@@ -281,23 +281,3 @@
     padding: 10px 20px;
   }
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero {
-    height: 350px;
-  }
-
-  .slide h1 {
-    font-size: 32px;
-  }
-
-  .slide p {
-    font-size: 18px;
-  }
-
-  .btn {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-}

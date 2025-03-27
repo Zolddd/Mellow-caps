@@ -89,7 +89,7 @@
 /* Enhancing visibility on small screens */
 @media (max-width: 480px) {
   .auth-container {
-    width: 90%;
+    width: auto;
     padding: 30px;
   }
 
