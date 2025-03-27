@@ -35,7 +35,7 @@ const Navbar = () => {
       <nav className="navbar">
         {/* Logo Section */}
         <div className="logo">
-          <img src="/images/logo.png" alt="Mellow Caps Logo" />
+          <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Mellow Caps Logo" />
           <h1>Mellow Caps</h1>
         </div>
 

@@ -7,21 +7,21 @@ const Home = () => {
 
   const slides = [
     {
-      image: "/images/hero1.jpg",
+      image: `${process.env.PUBLIC_URL}/images/hero1.jpg`,
       title: "Elevate Your Look with Mellow Caps",
       text: "Premium, stylish, and comfortable caps for every occasion.",
       link: "/shop",
       btnText: "Shop Now",
     },
     {
-      image: "/images/hero2.jpg",
+      image: `${process.env.PUBLIC_URL}/images/hero2.jpg`,
       title: "Discover Our New Collection",
       text: "Trendy designs to match your unique style.",
       link: "/shop",
       btnText: "Explore Now",
     },
     {
-      image: "/images/hero3.jpg",
+      image: `${process.env.PUBLIC_URL}/images/hero3.jpg`, 
       title: "Comfort Meets Style",
       text: "Perfect caps for every season and occasion.",
       link: "/shop",
@@ -82,17 +82,17 @@ const Home = () => {
         <h2>🔥 Featured Collection</h2>
         <div className="featured-products">
           <div className="product-card">
-            <img src="/images/cap1.jpg" alt="Classic Cap" />
+            <img src={`${process.env.PUBLIC_URL}/images/cap1.jpg`} alt="Classic Cap" />
             <h3>EDIKO Cap</h3>
             <p>₹149</p>
           </div>
           <div className="product-card">
-            <img src="/images/cap2.jpg" alt="Sporty Cap" />
+            <img src={`${process.env.PUBLIC_URL}/images/cap2.jpg`} alt="Sporty Cap" />
             <h3>KTM Cap</h3>
             <p>₹199</p>
           </div>
           <div className="product-card">
-            <img src="/images/cap3.jpg" alt="Luxury Cap" />
+            <img src={`${process.env.PUBLIC_URL}/images/cap3.jpg`} alt="Luxury Cap" />
             <h3>NY Cap</h3>
             <p>₹249</p>
           </div>

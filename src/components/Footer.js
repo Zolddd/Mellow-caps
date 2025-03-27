@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* Left Section - Logo and Name */}
         <div className="footer-logo">
-          <img src="/images/logo.png" alt="Mellow Caps Logo" />
+          <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Mellow Caps Logo" />
           <h2>Mellow Caps</h2>
         </div>
 
@@ -34,13 +34,13 @@ const Footer = () => {
         {/* Right Section - Social Media Links */}
         <div className="footer-social">
           <a href="https://www.facebook.com/share/14yLkaTTBp/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
-            <img src="/images/facebook.png" alt="Facebook" />
+            <img src={`${process.env.PUBLIC_URL}/images/facebook.png`} alt="Facebook" />
           </a>
           <a href="https://www.instagram.com/_ig_azim?igsh=MXcxbGNjZ2sxY3N1Nw==" target="_blank" rel="noopener noreferrer">
-            <img src="/images/instagram.png" alt="Instagram" />
+            <img src={`${process.env.PUBLIC_URL}/images/instagram.png`} alt="Instagram" />
           </a>
           <a href="https://x.com/Pirategamming24?t=qP-TM5I-jemGrTkPbyH3Vg&s=09" target="_blank" rel="noopener noreferrer">
-            <img src="/images/twitter.png" alt="Twitter" />
+            <img src={`${process.env.PUBLIC_URL}/images/twitter.png`} alt="Twitter" />
           </a>
         </div>
       </div>

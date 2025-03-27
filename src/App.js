@@ -20,9 +20,9 @@ function App() {
       id: 1,
       name: "EDIKO Cap",
       price: 149,
-      image: "/images/cap1.jpg",
-      image2: "/images/cap1(b).jpg",
-      image3: "/images/cap1(c).jpg",
+      image: `${process.env.PUBLIC_URL}/images/cap1.jpg`,
+      image2: `${process.env.PUBLIC_URL}/images/cap1(b).jpg`,
+      image3: `${process.env.PUBLIC_URL}/images/cap1(c).jpg`,
       description: "Elevate your style with the Gorgeous EDIKO Sports and Casual Cap by Gorgeous Caps. This premium-quality black baseball cap is designed for both sporty and casual looks, making it a perfect everyday accessory. The cap features a bold orange EDIKO leather sticker at the center, adding a touch of uniqueness and sophistication to your outfit. Made from high-quality, breathable materials, it ensures all-day comfort while keeping your head cool. The freesize design provides a perfect and adjustable fit for all head sizes, making it an ideal choice for men and women. Whether you’re heading out for a run, hitting the gym, or just adding a stylish edge to your casual look, this cap is the perfect companion for every occasion.",
       bulletPoints: [
         `🔥 PREMIUM BLACK BASEBALL CAP – A PERFECT STYLE STATEMENT
@@ -39,9 +39,9 @@ Made from lightweight, breathable, and sweat-absorbing fabric, this cap keeps yo
       id: 2,
       name: "KTM Cap",
       price: 199,
-      image: "/images/cap2.jpg",
-      image2: "/images/cap2(b).jpg",
-      image3: "/images/cap2(c).jpg",
+      image: `${process.env.PUBLIC_URL}/images/cap2.jpg`,
+      image2: `${process.env.PUBLIC_URL}/images/cap2(b).jpg`,
+      image3: `${process.env.PUBLIC_URL}/images/cap2(c).jpg`,
       description: "Unleash your passion for biking with the Gorgeous KTM Bike Riding Sports and Casual Cap by Gorgeous Caps. Designed for KTM bike lovers and riders, this premium black baseball cap features a bold orange KTM 3D embroidery logo that perfectly represents the KTM spirit. Whether you're on a thrilling bike ride or just looking for a stylish casual cap, this cap is the perfect addition to your outfit. Made from high-quality breathable fabric, it offers all-day comfort, while the freesize adjustable fit ensures a snug and secure feel for everyone. Elevate your biker look with this stylish and durable cap!",
   bulletPoints: [
     `🏍️ KTM BIKE LOVERS’ MUST-HAVE – PERFECT FOR RIDERS & ENTHUSIASTS
@@ -58,9 +58,9 @@ Constructed with strong stitching and high-quality fabric, this cap is designed 
       id: 3,
       name: "NY Cap",
       price: 249,
-      image: "/images/cap3.jpg",
-      image2: "/images/cap3(b).jpg",
-      image3: "/images/cap3(c).jpg",
+      image: `${process.env.PUBLIC_URL}/images/cap3.jpg`,
+      image2: `${process.env.PUBLIC_URL}/images/cap3(b).jpg`,
+      image3: `${process.env.PUBLIC_URL}/images/cap3(c).jpg`,
       description: "Upgrade your style with the Gorgeous NY Sports and Casual Cap by Gorgeous Caps. This premium black baseball cap features a bold white ‘NY’ 3D embroidery logo, a globally recognized symbol of street style, sports, and urban fashion. Worn by celebrities and fashion icons, this cap is a must-have accessory for anyone looking to add a touch of class and attitude to their outfit. Made from high-quality breathable fabric, it ensures all-day comfort, while the adjustable strap provides a perfect fit for all head sizes. Whether for casual wear, sports, or travel, this cap enhances your look effortlessly.",
       bulletPoints: [
         `🧢 ICONIC ‘NY’ 3D EMBROIDERY LOGO – CELEBRITY STYLE
