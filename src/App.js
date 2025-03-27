@@ -124,7 +124,7 @@ An ideal gift for friends, family, or anyone who loves NY-inspired fashion, maki
       <Navbar user={user} handleLogout={handleLogout} />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Mellow-caps" element={<Home />} />
         <Route path="/shop" element={<ProductList products={products} />} />
         <Route
           path="/product/:id"
