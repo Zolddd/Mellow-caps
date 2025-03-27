@@ -6,14 +6,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f8f8f8; /* Light background */
+  background: #f8f8f8;
   border-radius: 10px;
 }
 
 /* Section Heading */
 .cart h2 {
   font-size: 26px;
-  color: #321554; /* Dark navy blue */
+  color: #321554;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -28,7 +28,7 @@
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background: #f5a623; /* Gold accent */
+  background: #f5a623;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -37,17 +37,18 @@
 }
 
 .shop-now:hover {
-  background: #e59400; /* Darker gold */
+  background: #e59400;
   transform: scale(1.05);
 }
 
 /* Cart Item Styling */
 .cart-item {
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   padding: 15px;
-  border-bottom: 2px solid #321554; /* Matches navbar theme */
+  border-bottom: 2px solid #321554;
   width: 90%;
   max-width: 600px;
   justify-content: space-between;
@@ -62,7 +63,7 @@
 }
 
 /* Product Image */
-.cart-item img {
+.cart-image {
   width: 80px;
   height: auto;
   border-radius: 8px;
@@ -77,13 +78,36 @@
 .cart-details h3 {
   margin: 5px 0;
   font-size: 18px;
-  color: #321554; /* Dark navy blue */
+  color: #321554;
 }
 
-.cart-details p {
-  font-size: 16px;
-  color: #f5a623; /* Gold accent */
+.final-price {
+  color: #f5a623;
   font-weight: bold;
+}
+
+/* Remove Button (Now Below Price on the Left) */
+.remove-btn {
+  background: #dc3545;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background 0.3s ease;
+  display: block; /* Ensures it appears below price */
+}
+
+.remove-btn:hover {
+  background: #c82333;
+}
+
+/* Quantity Section */
+.quantity-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Quantity Controls */
@@ -91,11 +115,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 5px;
 }
 
 .quantity-control button {
-  background: #321554; /* Dark navy blue */
+  background: #321554;
   color: white;
   padding: 5px 12px;
   border: none;
@@ -105,7 +128,7 @@
 }
 
 .quantity-control button:hover {
-  background: #210d3b; /* Slightly darker navy */
+  background: #210d3b;
 }
 
 .quantity-control span {
@@ -113,28 +136,12 @@
   font-weight: bold;
 }
 
-/* Remove Button */
-.remove-btn {
-  background: #dc3545;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 5px;
-}
-
-.remove-btn:hover {
-  background: #c82333;
-}
-
 /* Cart Total */
 .cart-total {
   margin-top: 20px;
   font-size: 20px;
   font-weight: bold;
-  color: #321554; /* Dark navy blue */
+  color: #321554;
 }
 
 /* Checkout Button */
@@ -142,7 +149,7 @@
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background: #f5a623; /* Gold accent */
+  background: #f5a623;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -152,7 +159,7 @@
 }
 
 .checkout-btn:hover {
-  background: #e59400; /* Darker gold */
+  background: #e59400;
   transform: scale(1.05);
 }
 
@@ -163,7 +170,58 @@
   pointer-events: none;
 }
 
-/* Empty Cart Styling */
-.cart-empty {
-  min-height: 85vh;
+/* ✅ Empty Cart Styling */
+.empty-cart {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.empty-cart p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.shop-now-btn {
+  display: inline-block;
+  background-color: #f5a623;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.shop-now-btn:hover {
+  background-color: #e59400;
+}
+
+/* ✅ Empty Cart Icon */
+.empty-cart-icon {
+  font-size: 80px;
+  color: #ccc;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .quantity-section {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .quantity-control {
+    margin-bottom: 0;
+  }
 }

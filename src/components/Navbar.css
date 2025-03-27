@@ -54,15 +54,17 @@
 }
 
 /* Active & Hover Effects */
-.nav-links li a.active, .logout-btn:hover {
+.nav-links li a.active {
   /* font-weight: bold; */
   color: #f5a623;
-  /* border-bottom: 3px solid #f5a623; */
+  border-bottom: 2px solid #f5a623;
 }
-
+.logout-btn:hover {
+  color: #f5a623;
+}
 .nav-links li a:hover {
   color: #f5a623;
-  border-bottom: 3px solid #f5a623;
+  border-bottom: 2px solid #f5a623;
 }
 
 /* Search Bar */

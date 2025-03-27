@@ -27,11 +27,11 @@ const PlaceOrder = () => {
             <img src={item.image} alt={item.name} />
             <div className="order-details">
               <h4>{item.name}</h4>
-              <p>${item.price} × {item.quantity}</p>
+              <p>₹{item.hasDiscount ? item.finalPrice : item.price} × {item.quantity}</p>
             </div>
           </div>
         ))}
-        <h3 className="total-price">Total Paid: ${totalPrice.toFixed(2)}</h3>
+        <h3 className="total-price">Total Paid: ₹{totalPrice.toFixed(2)}</h3>
       </div>
 
       <p className="message">You will receive an email confirmation with order details.</p>

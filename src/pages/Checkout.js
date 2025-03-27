@@ -3,14 +3,20 @@ import { useNavigate } from "react-router-dom";
 import upiQR from "../assets/upi_qr.png"; // ✅ Correct import
 import "./Checkout.css";
 
-const Checkout = ({ cart, totalPrice, setCart }) => {
+const Checkout = ({ cart, setCart }) => {
   const navigate = useNavigate();
   const [showPopup, setShowPopup] = useState(false);
   const [paymentDone, setPaymentDone] = useState(false);
   const [showPaymentAlert, setShowPaymentAlert] = useState(false);
   const [upiId, setUpiId] = useState("");
   const [showInvalidUpiAlert, setShowInvalidUpiAlert] = useState(false);
-  const [showPaymentReminder, setShowPaymentReminder] = useState(false); // ✅ New state for payment reminder popup
+  const [showPaymentReminder, setShowPaymentReminder] = useState(false);
+
+  // ✅ Calculate total price dynamically
+  const totalPrice = cart.reduce((total, item) => {
+    const price = item.hasDiscount ? item.finalPrice : item.price;
+    return total + price * item.quantity;
+  }, 0);
 
   // ✅ Handle Place Order
   const handlePlaceOrder = (e) => {
@@ -22,9 +28,12 @@ const Checkout = ({ cart, totalPrice, setCart }) => {
     }
 
     if (!paymentDone) {
-      setShowPaymentReminder(true); // ✅ Show the styled popup
+      setShowPaymentReminder(true);
       return;
     }
+
+    // Store the final total price before clearing the cart
+    const finalPrice = totalPrice;
 
     // Show confirmation popup
     setShowPopup(true);
@@ -33,7 +42,7 @@ const Checkout = ({ cart, totalPrice, setCart }) => {
     setTimeout(() => {
       setShowPopup(false);
       setCart([]); // Clear cart
-      navigate("/place-order", { state: { cart, totalPrice } });
+      navigate("/place-order", { state: { cart, totalPrice: finalPrice } }); // ✅ Pass stored total price
     }, 2000);
   };
 
@@ -41,16 +50,12 @@ const Checkout = ({ cart, totalPrice, setCart }) => {
   const handlePayment = () => {
     if (upiId && !upiId.includes("@")) {
       setShowInvalidUpiAlert(true);
-
-      // Hide invalid UPI alert after 3 seconds
       setTimeout(() => setShowInvalidUpiAlert(false), 3000);
       return;
     }
 
     setPaymentDone(true);
     setShowPaymentAlert(true);
-
-    // Hide the payment alert after 3 seconds
     setTimeout(() => setShowPaymentAlert(false), 3000);
   };
 
@@ -58,8 +63,13 @@ const Checkout = ({ cart, totalPrice, setCart }) => {
     <div className="checkout-container">
       <h2>Checkout</h2>
 
+      {/* ✅ Display Empty Cart Message */}
       {cart.length === 0 ? (
-        <p>Your cart is empty. <a href="/shop">Shop Now</a></p>
+        <div className="empty-cart">
+          <span className="empty-cart-icon">🛒</span>
+          <p>Your cart is empty.</p>
+          <a href="/shop" className="shop-now-btn">Shop Now</a>
+        </div>
       ) : (
         <>
           <div className="order-summary">
@@ -69,11 +79,11 @@ const Checkout = ({ cart, totalPrice, setCart }) => {
                 <img src={item.image} alt={item.name} />
                 <div className="checkout-details">
                   <h4>{item.name}</h4>
-                  <p>${item.price} × {item.quantity}</p>
+                  <p>₹{item.hasDiscount ? item.finalPrice : item.price} × {item.quantity}</p>
                 </div>
               </div>
             ))}
-            <h3 className="total-price">Total: ${totalPrice.toFixed(2)}</h3>
+            <h3 className="total-price">Total: ₹{totalPrice.toFixed(2)}</h3>
           </div>
 
           <form className="checkout-form" onSubmit={handlePlaceOrder}>
@@ -86,9 +96,9 @@ const Checkout = ({ cart, totalPrice, setCart }) => {
 
             {/* ✅ UPI Payment Section */}
             <div className="upi-payment">
-              <h3 color="white">UPI Payment</h3>
+              <h3>UPI Payment</h3>
               <img src={upiQR} alt="UPI QR Code" className="upi-qr" />
-              <p color="white">Scan the QR code or enter UPI ID to pay</p>
+              <p>Scan the QR code or enter UPI ID to pay</p>
               <input
                 type="text"
                 placeholder="Enter UPI ID (e.g.123@ibl)"

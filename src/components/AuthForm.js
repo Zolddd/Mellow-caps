@@ -11,34 +11,35 @@ const AuthForm = () => {
     address: "",
     password: "",
   });
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); // ✅ Error message state
   const navigate = useNavigate();
 
   const toggleForm = () => {
     setIsSignup(!isSignup);
     setFormData({ name: "", email: "", phone: "", address: "", password: "" });
-    setErrorMessage("");
+    setErrorMessage(""); // ✅ Clear errors when switching form
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    if (name === "phone") {
-      if (!/^\d{0,10}$/.test(value)) { // Allows only up to 10 digits
-        return; // Prevents input of invalid characters
-      }
-    }
-
     setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (isSignup && !/^\d{10}$/.test(formData.phone)) {
-      setErrorMessage("Phone number must be exactly 10 digits.");
-      return;
+    if (isSignup) {
+      if (!/^\d+$/.test(formData.phone)) {
+        setErrorMessage("❌ Phone number must contain only numbers.");
+        return;
+      }
+      if (formData.phone.length !== 10) {
+        setErrorMessage("❌ Phone number must be exactly 10 digits.");
+        return;
+      }
     }
+
+    setErrorMessage(""); // ✅ Clear error if input is valid
 
     if (isSignup) {
       console.log("Signing up:", formData);
@@ -75,7 +76,9 @@ const AuthForm = () => {
                 onChange={handleChange}
                 required
               />
-              {errorMessage && <p className="error-message">{errorMessage}</p>}
+              {errorMessage && (
+                <p className="error-message">{errorMessage}</p> // ✅ Now always visible
+              )}
               <input
                 type="text"
                 name="address"
@@ -102,7 +105,6 @@ const AuthForm = () => {
             onChange={handleChange}
             required
           />
-          {errorMessage && !isSignup && <p className="error-message">{errorMessage}</p>}
           <button type="submit">{isSignup ? "Sign Up" : "Login"}</button>
         </form>
         <p onClick={toggleForm} className="toggle-text">

@@ -11,7 +11,7 @@ const ProductList = ({ products }) => {
           <div key={product.id} className="product-card">
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
-            <p>${product.price}</p>
+            <p>₹{product.price}</p>
             {/* ✅ Corrected Link Syntax */}
             <Link to={`/product/${product.id}`} className="view-details">
               View Details

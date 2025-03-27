@@ -83,18 +83,18 @@ const Home = () => {
         <div className="featured-products">
           <div className="product-card">
             <img src="/images/cap1.jpg" alt="Classic Cap" />
-            <h3>Classic Cap</h3>
-            <p>$20</p>
+            <h3>EDIKO Cap</h3>
+            <p>₹149</p>
           </div>
           <div className="product-card">
             <img src="/images/cap2.jpg" alt="Sporty Cap" />
-            <h3>Sporty Cap</h3>
-            <p>$25</p>
+            <h3>KTM Cap</h3>
+            <p>₹199</p>
           </div>
           <div className="product-card">
             <img src="/images/cap3.jpg" alt="Luxury Cap" />
-            <h3>Luxury Cap</h3>
-            <p>$30</p>
+            <h3>NY Cap</h3>
+            <p>₹249</p>
           </div>
         </div>
         <Link to="/shop" className="btn explore-btn">
@@ -125,10 +125,10 @@ const Home = () => {
       <section className="testimonials">
         <h2>What Our Customers Say</h2>
         <div className="testimonial">
-          <p>"Absolutely love my new cap! The quality is amazing, and it looks great!" – Alex</p>
+          <p>"Absolutely love my new cap! The quality is amazing, and it looks great!" – Akram D.</p>
         </div>
         <div className="testimonial">
-          <p>"Super fast delivery and top-notch quality. Highly recommended!" – Sarah</p>
+          <p>"Super fast delivery and top-notch quality. Highly recommended!" – Kichu I.</p>
         </div>
       </section>
     </div>

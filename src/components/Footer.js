@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
@@ -14,28 +15,31 @@ const Footer = () => {
         {/* Middle Section - Navigation Links */}
         <ul className="footer-links">
           <li>
-            <a href="/">Home</a>
+            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
           </li>
           <li>
-            <a href="/shop">Shop</a>
+            <NavLink to="/shop" className={({ isActive }) => (isActive ? "active" : "")}>Shop</NavLink>
           </li>
           <li>
-            <a href="/cart">Cart</a>
+            <NavLink to="/cart" className={({ isActive }) => (isActive ? "active" : "")}>Cart</NavLink>
           </li>
-          {/* <li>
-            <a href="/contact">Contact</a>
-          </li> */}
+          <li>
+            <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>About Us</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>Contact Us</NavLink>
+          </li>
         </ul>
 
-        {/* Right Section - Social Media Links with Images */}
+        {/* Right Section - Social Media Links */}
         <div className="footer-social">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/share/14yLkaTTBp/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
             <img src="/images/facebook.png" alt="Facebook" />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/_ig_azim?igsh=MXcxbGNjZ2sxY3N1Nw==" target="_blank" rel="noopener noreferrer">
             <img src="/images/instagram.png" alt="Instagram" />
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/Pirategamming24?t=qP-TM5I-jemGrTkPbyH3Vg&s=09" target="_blank" rel="noopener noreferrer">
             <img src="/images/twitter.png" alt="Twitter" />
           </a>
         </div>
@@ -43,7 +47,7 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="footer-bottom">
-        <p>© 2024 Mellow Caps. All rights reserved.</p>
+        <p>© 2025 Mellow Caps. All rights reserved. Unauthorized reproduction or distribution is strictly prohibited.</p>
       </div>
     </footer>
   );
