@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Mellow-caps/static/css/main.723b2d49.css",
-    "main.js": "/Mellow-caps/static/js/main.f05a7ecc.js",
+    "main.js": "/Mellow-caps/static/js/main.257e38d6.js",
     "static/js/453.49dc5d8f.chunk.js": "/Mellow-caps/static/js/453.49dc5d8f.chunk.js",
     "static/media/upi_qr.png": "/Mellow-caps/static/media/upi_qr.183cd692e60e74f6caaf.png",
     "index.html": "/Mellow-caps/index.html",
     "main.723b2d49.css.map": "/Mellow-caps/static/css/main.723b2d49.css.map",
-    "main.f05a7ecc.js.map": "/Mellow-caps/static/js/main.f05a7ecc.js.map",
+    "main.257e38d6.js.map": "/Mellow-caps/static/js/main.257e38d6.js.map",
     "453.49dc5d8f.chunk.js.map": "/Mellow-caps/static/js/453.49dc5d8f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.723b2d49.css",
-    "static/js/main.f05a7ecc.js"
+    "static/js/main.257e38d6.js"
   ]
 }
