@@ -46,31 +46,49 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <li>
-            <Link to="/Mellow-caps" className={location.pathname === "/Mellow-caps" ? "active" : ""}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/shop" className={location.pathname === "/shop" ? "active" : ""}>
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link to="/cart" className={location.pathname === "/cart" ? "active" : ""}>
-              Cart
-            </Link>
-          </li>
-          <li>
-            {isLoggedIn ? (
-              <button className="logout-btn" onClick={() => setShowLogoutModal(true)}>Logout</button>
-            ) : (
-              <Link to="/login" className={location.pathname === "/login" ? "active" : ""}>
-                Login / Signup
-              </Link>
-            )}
-          </li>
-        </ul>
+  <li>
+    <Link 
+      to="/" 
+      className={location.pathname === "/" ? "active" : ""} 
+      onClick={() => setMenuOpen(false)} // Close menu on click
+    >
+      Home
+    </Link>
+  </li>
+  <li>
+    <Link 
+      to="/shop" 
+      className={location.pathname === "/shop" ? "active" : ""} 
+      onClick={() => setMenuOpen(false)}
+    >
+      Shop
+    </Link>
+  </li>
+  <li>
+    <Link 
+      to="/cart" 
+      className={location.pathname === "/cart" ? "active" : ""} 
+      onClick={() => setMenuOpen(false)}
+    >
+      Cart
+    </Link>
+  </li>
+  <li>
+    {isLoggedIn ? (
+      <button className="logout-btn" onClick={() => { setMenuOpen(false); setShowLogoutModal(true); }}>
+        Logout
+      </button>
+    ) : (
+      <Link 
+        to="/login" 
+        className={location.pathname === "/login" ? "active" : ""} 
+        onClick={() => setMenuOpen(false)}
+      >
+        Login / Signup
+      </Link>
+    )}
+  </li>
+</ul>
 
         {/* Search Bar */}
         <div className="search-bar">

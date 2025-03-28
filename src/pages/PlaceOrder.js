@@ -36,7 +36,7 @@ const PlaceOrder = () => {
 
       <p className="message">You will receive an email confirmation with order details.</p>
 
-      <button className="back-home" onClick={() => navigate("/Mellow-caps")}>🏠 Back to Home</button>
+      <button className="back-home" onClick={() => navigate("/")}>🏠 Back to Home</button>
     </div>
   );
 };

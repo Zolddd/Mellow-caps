@@ -143,6 +143,6 @@
   }
 
   .mission, .vision {
-    width: 100%;
+    width: auto;
   }
 }
