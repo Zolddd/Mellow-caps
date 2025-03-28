@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Mellow-caps/static/css/main.197de306.css",
-    "main.js": "/Mellow-caps/static/js/main.952f291b.js",
-    "static/js/453.49dc5d8f.chunk.js": "/Mellow-caps/static/js/453.49dc5d8f.chunk.js",
-    "static/media/upi_qr.png": "/Mellow-caps/static/media/upi_qr.183cd692e60e74f6caaf.png",
-    "index.html": "/Mellow-caps/index.html",
-    "main.197de306.css.map": "/Mellow-caps/static/css/main.197de306.css.map",
-    "main.952f291b.js.map": "/Mellow-caps/static/js/main.952f291b.js.map",
-    "453.49dc5d8f.chunk.js.map": "/Mellow-caps/static/js/453.49dc5d8f.chunk.js.map"
+    "main.css": "/static/css/main.606d1eb8.css",
+    "main.js": "/static/js/main.7c0d7102.js",
+    "static/js/453.49dc5d8f.chunk.js": "/static/js/453.49dc5d8f.chunk.js",
+    "static/media/upi_qr.png": "/static/media/upi_qr.183cd692e60e74f6caaf.png",
+    "index.html": "/index.html",
+    "main.606d1eb8.css.map": "/static/css/main.606d1eb8.css.map",
+    "main.7c0d7102.js.map": "/static/js/main.7c0d7102.js.map",
+    "453.49dc5d8f.chunk.js.map": "/static/js/453.49dc5d8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.197de306.css",
-    "static/js/main.952f291b.js"
+    "static/css/main.606d1eb8.css",
+    "static/js/main.7c0d7102.js"
   ]
 }
