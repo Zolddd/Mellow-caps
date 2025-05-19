@@ -45,7 +45,7 @@ Mellow-caps/
 └── README.md
 ```
 ## 🧑‍💻 Author
-Zolddd — @Zolddd on GitHub
+Zolddd — https://github.com/Zolddd
 
 ## 📄 License
 This project is licensed under the MIT License
