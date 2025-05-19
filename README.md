@@ -1,53 +1,26 @@
 🎩 Mellow Caps
 Mellow Caps is a sleek, responsive React application built with a clean custom design. It showcases dynamic components, polished UI interactions, and a professional layout—all powered by custom CSS and modern React practices.
-
 🚀 Features
-⚡ Fast & Responsive — Built with a mobile-first approach using custom CSS.
-
-🧩 Component-Based Architecture — Easy to scale and maintain.
-
-🎨 Handcrafted Design — Styled fully with custom CSS for a unique, lightweight experience.
-
-🔁 Smooth Navigation — Powered by React Router.
-
-🧼 Clean Codebase — Organized file structure and reusable components.
-
+•	⚡ Fast & Responsive — Built with a mobile-first approach using custom CSS.
+•	🧩 Component-Based Architecture — Easy to scale and maintain.
+•	🎨 Handcrafted Design — Styled fully with custom CSS for a unique, lightweight experience.
+•	🔁 Smooth Navigation — Powered by React Router.
+•	🧼 Clean Codebase — Organized file structure and reusable components.
 🛠️ Tech Stack
-React
-
-React Router
-
-Custom CSS (No external UI libraries)
-
+•	React
+•	React Router
+•	Custom CSS (No external UI libraries)
 📦 Installation
-Clone the repository:
-
-bash
-Copy
-Edit
+1. Clone the repository:
 git clone https://github.com/Zolddd/Mellow-caps.git
-Navigate into the folder:
-
-bash
-Copy
-Edit
+2. Navigate into the folder:
 cd Mellow-caps
-Install dependencies:
-
-bash
-Copy
-Edit
+3. Install dependencies:
 npm install
-Start the development server:
-
-bash
-Copy
-Edit
+4. Start the development server:
 npm start
 🗂️ Folder Structure
-php
-Copy
-Edit
+
 Mellow-caps/
 ├── public/
 │   └── index.html
@@ -59,11 +32,10 @@ Mellow-caps/
 │   └── index.js        # React entry point
 ├── package.json
 └── README.md
+
 📸 Screenshots
 (Optional) Add screenshots or a short demo video/gif here to showcase the UI.
-
 🧑‍💻 Author
 Zolddd — @Zolddd on GitHub
-
 📄 License
-This project is licensed under the MIT License
+This project is licensed under the MIT License.
